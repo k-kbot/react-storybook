@@ -25,11 +25,11 @@ const Game = () => {
   }
 
   const jumpTo = step => {
-    stepNumber(step);
+    setStepNumber(step);
     setXIsNext(step % 2 === 0);
   };
 
-  const current = history[this.state.stepNumber];
+  const current = history[stepNumber];
   const winner = calculateWinner(current.squares);
 
   const moves = history.map((step, move) => {
