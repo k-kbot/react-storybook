@@ -1,5 +1,6 @@
 import React from 'react';
 import Square from '../square/Square';
+import '../../index.css';
 
 const Board = ({ squares, onClick}) => {
   const renderSquare = i => {

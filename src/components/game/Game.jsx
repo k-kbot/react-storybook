@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Board from '../board/Board';
+import '../../index.css';
 
 const Game = () => {
   const [history, setHistory] = useState([
