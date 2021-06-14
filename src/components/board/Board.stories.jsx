@@ -8,8 +8,8 @@ export default {
 
 const Template = args => <Board {...args} />;
 
-export const FilledWithNull = Template.bind({});
-FilledWithNull.args = {
+export const Default = Template.bind({});
+Default.args = {
   squares: Array(9).fill(null),
   onClick: () => {},
 };

@@ -8,8 +8,8 @@ export default {
 
 const Template = args => <Square {...args} />;
 
-export const FilledWithNull = Template.bind({});
-FilledWithNull.args = {
+export const Default = Template.bind({});
+Default.args = {
   value: null,
   onClick: () => {},
 };
