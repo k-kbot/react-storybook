@@ -67,7 +67,7 @@ const Game = () => {
   );
 };
 
-const calculateWinner =squares => {
+const calculateWinner = squares => {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
