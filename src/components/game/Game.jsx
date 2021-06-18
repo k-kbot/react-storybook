@@ -60,7 +60,7 @@ const Game = () => {
         />
       </div>
       <div className="game-info">
-        <div>{status}</div>
+        <div data-e2e="status" >{status}</div>
         <ol>{moves}</ol>
       </div>
     </div>
