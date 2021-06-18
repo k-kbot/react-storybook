@@ -47,6 +47,8 @@ const Game = () => {
   let status;
   if (winner) {
     status = 'Winner: ' + winner;
+  } else if(winner || !current.squares.includes(null)) {
+    status = 'Draw!';
   } else {
     status = 'Next player: ' + (xIsNext ? 'X' : 'O');
   }
