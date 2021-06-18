@@ -23,5 +23,6 @@ describe('Game', () => {
     cy.get('[data-e2e="button-8"]').click().should('have.text', 'O')
     cy.get('[data-e2e="button-7"]').click().should('have.text', 'X')
     cy.get('[data-e2e="status"]').should('have.text', 'Draw!')
+    cy.get('[data-e2e="status"]').should('not.have.text', 'Winner: ')
   });
 });
