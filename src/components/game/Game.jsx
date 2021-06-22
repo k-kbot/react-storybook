@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import Board from '../board/Board';
 import '../../index.css';
 
-const Game = () => {
-  const [history, setHistory] = useState([
-    {
-      squares: Array(9).fill(null)
-    }
-  ])
-  const [stepNumber, setStepNumber] = useState(0);
+const Game = props => {
+  const {
+    history,
+    setHistory,
+    stepNumber,
+    setStepNumber
+  } = props
   const [xIsNext, setXIsNext] = useState(true);
 
   const handleClick = i => {
@@ -47,6 +47,8 @@ const Game = () => {
   let status;
   if (winner) {
     status = 'Winner: ' + winner;
+  } else if(winner || !current.squares.includes(null)) {
+    status = 'Draw!';
   } else {
     status = 'Next player: ' + (xIsNext ? 'X' : 'O');
   }
@@ -60,7 +62,7 @@ const Game = () => {
         />
       </div>
       <div className="game-info">
-        <div>{status}</div>
+        <div data-e2e="status" >{status}</div>
         <ol>{moves}</ol>
       </div>
     </div>

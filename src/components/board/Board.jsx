@@ -8,6 +8,7 @@ const Board = ({ squares, onClick}) => {
       <Square
         value={squares[i]}
         onClick={() => onClick(i)}
+        id={i}
       />
     );
   }
