@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import Board from '../board/Board';
 import '../../index.css';
 
-const Game = () => {
-  const [history, setHistory] = useState([
-    {
-      squares: Array(9).fill(null)
-    }
-  ])
-  const [stepNumber, setStepNumber] = useState(0);
+const Game = props => {
+  const {
+    history,
+    setHistory,
+    stepNumber,
+    setStepNumber
+  } = props
   const [xIsNext, setXIsNext] = useState(true);
 
   const handleClick = i => {
